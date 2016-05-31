@@ -1,0 +1,6 @@
+diff a/update_checklist_status.php b/update_checklist_status.php	(rejected hunks)
+@@ -0,3 +1,4 @@
++<?php
+ 
+ require './config.php';
+ 
