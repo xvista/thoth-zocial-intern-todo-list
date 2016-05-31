@@ -236,10 +236,17 @@ Sections
   background-color: #9A47CB;
   transform: rotate(45deg);
 }
-.menu_top_button:active{
+.menu_top_button_ac{
   transform: rotate(45deg);
   background-color: #9A47CB;
+  transition: 0.5s
 }
+
+/*.menu_top_button::after{
+  transform: rotate(45deg);
+  transition: 0.3s ease-in-out;
+  background-color: #9A47CB;
+}*/
 .menu_hide{
   width: 100%;
   height: 300px;
@@ -509,7 +516,7 @@ p {
   margin-bottom: 1em;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Modules - reusable parts of our design
 
