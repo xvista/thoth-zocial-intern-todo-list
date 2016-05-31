@@ -62,7 +62,7 @@
     <a href="#0" class="cd-popup-close img-replace">Close</a>
   </div> <!-- cd-popup-container -->
 </div> <!-- cd-popup -->
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
 
         <script src="js/index_popup.js"></script>
     </ul>

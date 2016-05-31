@@ -1,0 +1,31 @@
+body {
+  padding: 0px;
+  border: 0px;
+  margin: 0px; }
+
+.top_menu {
+  width: 100%;
+  height: 100px;
+  background-color: #CCCCCC;
+  float: left; }
+  .top_menu h3 {
+    padding-left: 5%; }
+  .top_menu .menu_top_button {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: #ffcc00;
+    float: right;
+    margin-top: -40px;
+    margin-right: 5%;
+    cursor: pointer; }
+  .top_menu .menu_hide {
+    width: 100%;
+    height: 300px;
+    background-color: #1D2B53;
+    display: none;
+    float: none;
+    float: left;
+    margin-top: 20px; }
+
+/*# sourceMappingURL=style_test.css.map */
