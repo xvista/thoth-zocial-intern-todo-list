@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Portfolio Landing Page</title>
+    <title>Post it</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -31,8 +31,9 @@
 <div class="cd-popup" role="alert">
   <div class="cd-popup-container">
     <p>Add Note/Check list</p>
-    <form>
+
 <div class="floating-placeholder">
+<form action="addnote_process.php" method="POST" enctype="">
   <input id="name" name="name" type="text"/>
   <label for="name">Title</label>
 </div><br>
@@ -40,6 +41,7 @@
   <textarea rows="4" cols="30"  type="text" />
   Enter text here...
   </textarea>
+<input type="submit">
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
