@@ -1,18 +1,26 @@
+<?php
+  require './config.php';
+  
+  $sql = "SELECT * FROM note ORDER BY note_id ASC";
+  $result = mysqli_query($connect, $sql);
+  
+  $notes = [];
+  while ($notes[] = mysqli_fetch_array($result));
+  array_pop($notes);
+?>
+
 <!DOCTYPE html>
-<html >
+<html>
   <head>
     <meta charset="UTF-8">
     <title>Post it</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-
   <body>
-
     <nav class="container-fluid nav">
   <div class="container cf">
     <div class="brand">
@@ -65,37 +73,30 @@
 <div class="container-fluid portfolio" id="portfolio">
   <div class="container cf">
     <div class="gallery">
-      <div class="post-it-note">
-        <p>This folded corner works on any colored background!</p>
-      </div>
-      <div class="post-it-note">
-        <p>This folded corner works on any colored background!</p>
-      </div>
-      <div class="post-it-note">
-        <p>This folded corner works on any colored background!</p>
-      </div>
+      <?php
+        foreach ($notes as $note) {
+          echo '<div class="post-it-note">';
+          echo '<h2>' . nl2br($note['title']) . '</h2>';
+          echo '<p>' . nl2br($note['content']) . '</p>';
+          if ($note['type'] == 2) {
+            $sql = "SELECT * FROM checklist WHERE note_id = {$note['note_id']} ORDER BY checklist_id ASC";
+            $result = mysqli_query($connect, $sql);
+            echo '<ul>';
+            foreach ($result as $checklist) {
+              echo '<li>' . $checklist['content'] . '</li>';
+            }
+            echo '</ul>';
+          }
+          echo '</div>';
+        }
+      ?>
     </div>
   </div>
 </div>
 
 
-
-
-<footer class="container-fluid footer">
-  <div class="container">
-    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-    <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-    <a href="#" target="_blank"><i class="fa fa-dribbble"></i></a>
-    <a href="#" target="_blank"><i class="fa fa-codepen"></i></a>
-  </div>
-</footer>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-        <script src="js/index.js"></script>
-
-
-
+    <script src="js/index.js"></script>
 
   </body>
 </html>

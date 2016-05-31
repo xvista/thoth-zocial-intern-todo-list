@@ -413,8 +413,6 @@ body {
   background: #323232;
 }
 
-
-
 p {
   font-family: helvetica;
   font-size: 2em;
@@ -429,6 +427,8 @@ p {
   width: 30%;
   float: left;
   margin:20px;
+  margin-bottom: 3em;
+  text-align: left;
 }
 
 .post-it-note:after {
@@ -450,6 +450,17 @@ p {
   border-width: 2em 2em 0 0;
   border-style: solid;
   border-color: #d3b100 transparent;
+}
+
+.post-it-note h2 {
+  color: #333;
+}
+
+.post-it-note p {
+  font-family: helvetica;
+  font-size: 1em;
+  font-weight: normal;
+  color: #555;
 }
 
 /* -------------------------------- 
