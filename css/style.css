@@ -11,7 +11,7 @@ Utilities
 .cf::before,
 .cf::after {
     content: "";
-    display: table; 
+    display: table;
 }
 
 .cf::after {
@@ -69,6 +69,7 @@ Containers
 .container {
   margin: 0 auto;
   width: 100%;
+  height: auto;
 }
 
 /* ========================
@@ -249,7 +250,7 @@ Sections
 .portfolio {
   background-color: #3498DB;
   color: #fff;
-  height: 1000px;
+  height: auto;
 }
 
 .gallery .gallery-image {
@@ -324,14 +325,14 @@ Media Queries
 ======================== */
 
 @media (min-width: 768px) {
-  
+
   nav .nav-toggle {
     display: none;
   }
   .post-it-note {
     width: 100%;
   }
-  
+
   nav ul {
     border: none;
     clear: none;
@@ -340,74 +341,74 @@ Media Queries
     margin: 0;
     padding: 25px 0;
   }
-  
+
   nav ul li {
     border: none;
     display: inline-block;
     float: left;
     margin-right: 1.5em;
   }
-  
+
   nav ul li:last-of-type {
     margin-right: 0;
   }
-  
+
   nav ul li a {
     padding: 0;
   }
-  
+
   .splash h1 {
     font-size: 6em;
   }
-  
+
   .splash .lead {
     font-size: 3em;
   }
-  
+
   .features .col-3 {
     float: left;
     margin: 2em 5% 0 0;
     padding: 0 1em;
     width: 30%;
   }
-  
+
   .features .col-3:last-of-type {
     margin-right: 0;
   }
-  
+
   .gallery .gallery-image {
     float: left;
     margin-right: 2.5%;
     width: 31.6666666667%;
   }
-  
+
   .gallery .gallery-image:nth-of-type(3n) {
     margin-right: 0;
   }
-  
+
   .contact form {
     padding: 3em 2em 2em;
   }
-  
+
   .contact form input[type="submit"] {
     padding: 1em 3em;
     width: auto;
   }
-  
+
   .contact form input.full-half {
     float: left;
     margin-right: 2.5%;
     width: 48.75%;
   }
-  
+
   .contact form input.full-half:nth-of-type(2n) {
     margin-right: 0;
   }
-  
+
   .contact form textarea {
     height: 12em;
   }
-  
+
 }
 body {
   background: #323232;
@@ -488,9 +489,9 @@ Modules - reusable parts of our design
   white-space: nowrap;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xnugget info 
+xnugget info
 
 -------------------------------- */
 .cd-nugget-info {
@@ -524,9 +525,9 @@ xnugget info
   fill: #5e6e8d;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 header {
@@ -565,9 +566,9 @@ header h1 {
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xpopup 
+xpopup
 
 -------------------------------- */
 .cd-popup {
