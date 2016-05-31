@@ -329,7 +329,7 @@ Media Queries
     display: none;
   }
   .post-it-note {
-    width: 100%;
+    width: 30%;
   }
   
   nav ul {
@@ -409,6 +409,15 @@ Media Queries
   }
   
 }
+
+@media (max-width: 767px) {
+  
+  .post-it-note {
+    width: 95%;
+  }
+  
+}
+
 body {
   background: #323232;
 }
@@ -426,9 +435,9 @@ p {
   background: #ffd707;
   position: relative;
   min-height: 10em;
-  width: 30%;
   float: left;
   margin:20px;
+  margin-bottom: 3em;
 }
 
 .post-it-note:after {
