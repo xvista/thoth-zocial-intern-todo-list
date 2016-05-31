@@ -25,7 +25,8 @@
         ?>
         <br>
         <input type="text" name="title" value="<?=$title?>">
-        <input type="text" name="title" value="<?=$content?>">
+        <input type="text" name="content" value="<?=$content?>">
+        <input type="hidden" name="ids" value="<?=$check_ids?>">
         <?php
       }
 
