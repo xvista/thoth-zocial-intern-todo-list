@@ -2,12 +2,12 @@
 
 require './config.php';
 
-if(isset($_POST["title"],$_POST["content"],$_POST["important"],$_POST["type"])){
+if(isset($_POST["title"],$_POST["content"]/*,$_POST["important"],$_POST["type"]*/)){
   print_r($_POST);
   $title = $_POST["title"];
   $content = $_POST["content"];
-  $type = $_POST["type"];
-  $impo = $_POST["important"];
+  // $type = $_POST["type"];
+  // $impo = $_POST["important"];
   $file_url = "";
     if(isset($_FILES["image"])){
       $errors = array();
@@ -30,7 +30,7 @@ if(isset($_POST["title"],$_POST["content"],$_POST["important"],$_POST["type"])){
       }
     }
 
-  $sql = "INSERT INTO note (note_id,title,content,img,created_at,type,important) VALUES (NULL,'$title','$content','$file_url',CURRENT_TIMESTAMP,$type,$impo)";
+  $sql = "INSERT INTO note (note_id,title,content,img,created_at,type,important) VALUES (NULL,'$title','$content','$file_url',CURRENT_TIMESTAMP,1,0)";
   echo $sql;
   mysqli_query($connect,$sql);
 }
