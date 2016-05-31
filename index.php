@@ -34,15 +34,15 @@
 
 <div class="floating-placeholder">
 
-<form action="addnote_process.php" method="post" enctype="multipart/form-data">
-
-  <input type="text" name="title" id="name">
-  <label for="name">Title</label>
-</div><br>
-<div class="floating-placeholder">
-  <textarea name="content" rows="4" cols="30"  type="text" >
-  Enter text here...
-  </textarea>
+  <form action="addnote_process.php" method="post" enctype="multipart/form-data">
+    title <input type="text" name="title"><br>
+    content <input type="text" name="content"><br>
+    Image <input type="file" name="image"><br>
+    Important<br>
+    YES <input type="radio" name="important" value="1">
+    NO <input type="radio" name="important" value="0"><br>
+    <input type="hidden" name="type" value="1">
+    <input type="submit" name="submit"><input type="reset">
 <input type="submit">
 </form>
 
