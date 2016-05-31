@@ -1,9 +1,9 @@
 <?php
   require './config.php';
-  
+
   $sql = "SELECT * FROM note ORDER BY note_id ASC";
   $result = mysqli_query($connect, $sql);
-  
+
   $notes = [];
   while ($notes[] = mysqli_fetch_array($result));
   array_pop($notes);
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
   </head>
   <body>
     <nav class="container-fluid nav">
@@ -26,7 +27,7 @@
     <div class="brand">
       <a href="#splash">Post it</a>
     </div>
-    <i class="fa fa-bars nav-toggle"></i>
+    <!-- <i class="fa fa-bars nav-toggle"></i>
     <ul>
       <a href="#0" class="cd-popup-trigger">+</a>
 
@@ -51,7 +52,7 @@
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-        <script src="js/index_input.js"></script>
+        <script src="js/index_input.js"></script> -->
 
 
 
@@ -59,15 +60,42 @@
 
 
 
-    <a href="#0" class="cd-popup-close img-replace">Close</a>
+    <!-- <a href="#0" class="cd-popup-close img-replace">Close</a> -->
   </div> <!-- cd-popup-container -->
 </div> <!-- cd-popup -->
     <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
 
-        <script src="js/index_popup.js"></script>
-    </ul>
+        <!-- <script src="js/index_popup.js"></script> -->
+    <!-- </ul> -->
   </div>
+  <article class="menu_top_button">
+    <p class="set_f">+</p>
+  </article>
+  <script type="text/javascript">
+  $( ".menu_top_button" ).click(function() {
+      $(this).css("transform","rotate(45deg)");
+      $(this).css("background-color","#9A47CB");
+
+
+  // if (  $(this).css( "transform" ) == 'none' ){
+  //     $(this).css("transform","rotate(45deg)");
+  // } else {
+  //     $(this).css("transform","" );
+  // }
+});
+  </script>
 </nav>
+
+  <article class="menu_hide">
+  </article>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".menu_top_button").click(function(){
+      $(".menu_hide").toggle(1000);
+    });
+});
+
+</script>
 
 
 <div class="container-fluid portfolio" id="portfolio">
