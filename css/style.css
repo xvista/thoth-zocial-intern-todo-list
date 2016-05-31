@@ -504,7 +504,12 @@ p {
   margin-top: -1em;
 }
 
-/* --------------------------------
+.post-it-note img.thumbnail {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+/* -------------------------------- 
 
 Modules - reusable parts of our design
 
