@@ -78,7 +78,13 @@
           echo '<div class="post-it-note">';
           echo '<h2>' . $note['title'] . '</h2>';
           echo '<p class="note-timestamp">' . $note['created_at'] . '</p>';
+          
+          if ($note['img'] != '') {
+            echo '<a href="' . $note['img'] . '" target="_blank"><img class="thumbnail" src="' . $note['img'] . '"></a>';
+          }
+          
           echo '<p>' . nl2br($note['content']) . '</p>';
+          
           if ($note['type'] == 2) {
             $sql = "SELECT * FROM checklist WHERE note_id = {$note['note_id']} ORDER BY checklist_id ASC";
             $result = mysqli_query($connect, $sql);
