@@ -76,7 +76,8 @@
       <?php
         foreach ($notes as $note) {
           echo '<div class="post-it-note">';
-          echo '<h2>' . nl2br($note['title']) . '</h2>';
+          echo '<h2>' . $note['title'] . '</h2>';
+          echo '<p class="note-timestamp">' . $note['created_at'] . '</p>';
           echo '<p>' . nl2br($note['content']) . '</p>';
           if ($note['type'] == 2) {
             $sql = "SELECT * FROM checklist WHERE note_id = {$note['note_id']} ORDER BY checklist_id ASC";

@@ -461,7 +461,13 @@ p {
   font-family: helvetica;
   font-size: 1em;
   font-weight: normal;
-  color: #555;
+  color: #7D6A02;
+}
+
+.post-it-note p.note-timestamp {
+  color: #C5A604;
+  font-size: 0.75em;
+  margin-top: -1em;
 }
 
 /* --------------------------------
